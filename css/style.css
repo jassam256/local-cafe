@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  letter-spacing: 20%;
+  background-color: var(--primary);
+}
+
+/* ROOT VARIABLES */
+:root {
+  --primary: #f5f1ea;
+  --secondary: #6b705c;
+  --accent: #c97b63;
+}
+
+/* GLOBAL SECTIONS */
+/* header */
+header {
+  /* layout */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* styling */
+  background-color: var(--primary);
+  border-bottom: 1px solid black;
+
+  /* spacing */
+  padding: 0.5rem;
+}
+
+/* navigation */
+nav {
+  /* layout */
+  display: grid;
+  grid: 1fr/1fr 1fr auto 1fr 1fr;
+  align-items: center;
+
+  /* spacing */
+  width: 40%;
+  margin: auto;
+
+  /* styling */
+  text-align: center;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+/* footer */
+footer {
+  text-align: center;
+}
+
+.footer-container {
+  /* layout */
+  display: grid;
+  grid: 1fr/1fr 1fr 1fr;
+
+  /* styling */
+  text-align: center;
+
+  /* sizing */
+  width: 50%;
+
+  /* spacing */
+  margin: auto;
+  padding: 2rem;
+}
+
+/* ELEMENT STYLNG */
+button {
+  /* styling */
+  background-color: var(--accent);
+  border-radius: 5px;
+  border: 1px black solid;
+  outline: none;
+
+  /* spacing */
+  padding: 0.8rem 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* HOME PAGE - MAIN SECTION */
+section.hero {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  /* sizing */
+  height: 70vh;
+
+  /* styling */
+  background-image: url(https://placehold.co/600x400);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+div.hero-content {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  text-align: center;
+}
+
+/* card section */
+div.card-grid {
+  /* layout */
+  display: grid;
+  grid: 1fr 1fr/ 1fr 1fr;
+}
+
+.card-text {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* styling */
+  color: var(--primary);
+  background-color: var(--secondary);
+
+  border: 1px solid var(--secondary);
+}
+
+.card-img {
+  /* sizing */
+  width: 100%;
+}
+
+/* contact section */
+.home-contact {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* spacing */
+  padding: 5rem;
+}
