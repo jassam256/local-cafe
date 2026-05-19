@@ -17,6 +17,8 @@ body {
   --primary: #f5f1ea;
   --secondary: #6b705c;
   --accent: #c97b63;
+  --blk: #000000;
+  --w: #ffffff;
 }
 
 /* GLOBAL SECTIONS */
@@ -43,7 +45,6 @@ nav {
   align-items: center;
 
   /* spacing */
-  width: 40%;
   margin: auto;
 
   /* styling */
@@ -57,6 +58,8 @@ nav a {
 
 /* footer */
 footer {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -69,7 +72,7 @@ footer {
   text-align: center;
 
   /* sizing */
-  width: 50%;
+  gap: 5rem;
 
   /* spacing */
   margin: auto;
@@ -80,9 +83,15 @@ footer {
 button {
   /* styling */
   background-color: var(--accent);
+  box-shadow: 1px 1px 2px #000000;
+
   border-radius: 5px;
   border: 1px black solid;
   outline: none;
+
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 20%;
 
   /* spacing */
   padding: 0.8rem 0.5rem;
@@ -92,7 +101,7 @@ button {
   }
 }
 
-/* HOME PAGE - MAIN SECTION */
+/* START OF HOME PAGE CONTENT */
 section.hero {
   /* layout */
   display: flex;
@@ -106,10 +115,16 @@ section.hero {
   height: 70vh;
 
   /* styling */
-  background-image: url(https://placehold.co/600x400);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  color: white;
+  text-shadow: 2px 2px 3px #000000;
+  letter-spacing: 40%;
 }
 
 div.hero-content {
@@ -120,6 +135,20 @@ div.hero-content {
   align-items: center;
 
   position: absolute;
+}
+
+div.hero-content h2 {
+  /* styling */
+  font-size: 36px;
+
+  width: 400px;
+  height: 80px;
+
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  border-radius: 10px;
+
+  /* spacing */
+  align-content: center;
   text-align: center;
 }
 
@@ -138,19 +167,25 @@ div.card-grid {
   align-items: center;
 
   /* styling */
+  text-align: center;
   color: var(--primary);
   background-color: var(--secondary);
 
-  border: 1px solid var(--secondary);
+  /* border: 1px solid var(--secondary); */
+
+  /* spacing */
+  padding: 2rem;
 }
 
 .card-img {
   /* sizing */
   width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* contact section */
-.home-contact {
+.card-contact {
   /* layout */
   display: flex;
   flex-direction: column;
@@ -159,4 +194,210 @@ div.card-grid {
 
   /* spacing */
   padding: 5rem;
+}
+/* END OF HOME PAGE CONTENT */
+
+/* START OF MENU CONTENT */
+h2.menu-heading {
+  text-align: center;
+  background-color: var(--accent);
+}
+
+/* menu navigation */
+div.menu-nav {
+  /* layout */
+  display: grid;
+  grid: 1fr / auto auto auto;
+  justify-content: center;
+  align-items: center;
+
+  /* styling */
+  background-color: var(--secondary);
+
+  /* spacing */
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  gap: 2rem;
+}
+
+div.menu-nav a {
+  /* styling */
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--w);
+
+  /* spacing */
+  padding: 0.5rem 1rem;
+
+  /* sizing */
+  max-width: 120px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#menu-section {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* sizing */
+  height: 40vh;
+  width: 100vw;
+}
+
+#drinks-menu,
+#food-menu,
+#dessert-menu {
+  display: grid;
+  grid: 1fr/1fr 1fr;
+  place-items: center;
+
+  position: absolute;
+
+  visibility: visible;
+  opacity: 1;
+
+  transition:
+    visibility 0s,
+    opacity 0.8s linear;
+}
+
+.menu-img {
+  width: 480px;
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.menu-content {
+  padding: 1rem 1.5rem;
+}
+
+/* drinks menu */
+.drinks-header {
+  display: grid;
+  grid: 1fr/300px 50px 50px;
+  gap: 1.5rem;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.drinks-row {
+  display: grid;
+  grid: 1fr/300px 50px 50px;
+  gap: 1.5rem;
+}
+
+.drinks-row span:not(:first-child) {
+  text-align: center;
+}
+
+/* food menu */
+.food-header {
+  display: grid;
+  grid: 1fr/400px 50px;
+}
+
+.food-header span:first-child {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.food-header span:not(:first-child) {
+  text-align: center;
+}
+
+.food-row {
+  padding: 1rem 0;
+}
+
+.food-row p {
+  font-size: 16px;
+  width: 350px;
+}
+
+/* dessert menu */
+.dessert-row {
+  display: grid;
+  grid: 1fr/ 1fr 1fr;
+}
+
+.dessert-row span:not(:first-child) {
+  text-align: center;
+}
+
+.dessert-content {
+  padding-top: 1rem;
+}
+
+#drinks-menu.hide,
+#food-menu.hide,
+#dessert-menu.hide {
+  /* display: none; */
+  opacity: 0;
+
+  transition:
+    visibility 0s,
+    opacity 0.3s linear;
+}
+/* END OF MENU CONTENT */
+
+/* CONTACT PAGE */
+.contact-heading {
+  text-align: center;
+}
+
+form {
+  margin: auto;
+  width: 500px;
+  height: 300px;
+
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+.form-input label {
+  color: var(--w);
+}
+
+.form-input {
+  display: grid;
+  grid: 1fr/100px 200px;
+  align-items: center;
+}
+
+.form-input input,
+.form-input textarea {
+  padding: 0.5rem;
+  margin: 0.2rem 0;
+  border: 1px solid var(--blk);
+  outline: none;
+}
+
+form button {
+  display: block;
+  margin: auto;
+}
+
+form textarea {
+  width: 200px;
+  height: 80px;
+}
+
+/* UTILITY CLASSES */
+.t-upper {
+  text-transform: uppercase;
 }
