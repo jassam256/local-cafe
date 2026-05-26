@@ -8,7 +8,7 @@
 
 body {
   font-family: "Source Sans 3", sans-serif;
-  letter-spacing: 20%;
+  letter-spacing: 3px;
   background-color: var(--primary);
 }
 
@@ -33,7 +33,7 @@ header {
 
   /* styling */
   background-color: var(--primary);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--blk);
 
   /* spacing */
   padding: 0.5rem;
@@ -50,7 +50,8 @@ nav {
   margin: auto;
 
   /* sizing */
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
 
   /* styling */
   text-align: center;
@@ -91,6 +92,7 @@ footer {
 
 .footer-copyright {
   background-color: var(--secondary);
+  color: var(--w);
   padding: 0.5rem;
 }
 
@@ -109,7 +111,7 @@ button {
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
-  letter-spacing: 20%;
+  letter-spacing: 3px;
 
   /* spacing */
   padding: 0.8rem 0.5rem;
@@ -125,6 +127,27 @@ button {
   }
 }
 
+/* menu toggle */
+.menu-toggle {
+  display: none;
+  margin: auto;
+
+  font-size: 2rem;
+
+  background-color: var(--primary);
+  border: none;
+  box-shadow: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+  }
+
+  &:active {
+    background-color: var(--primary);
+  }
+}
+
 /* START OF HOME PAGE CONTENT */
 section.hero {
   /* layout */
@@ -137,6 +160,7 @@ section.hero {
 
   /* sizing */
   height: 70vh;
+  min-width: 100%;
 
   /* styling */
   background-image:
@@ -148,7 +172,7 @@ section.hero {
 
   color: white;
   text-shadow: 2px 2px 3px #000000;
-  letter-spacing: 40%;
+  letter-spacing: 16px;
 }
 
 div.hero-content {
@@ -180,7 +204,7 @@ div.hero-content h2 {
 div.card-grid {
   /* layout */
   display: grid;
-  grid: 1fr 1fr/ 1fr 1fr;
+  grid: 1fr 1fr / 1fr 1fr;
 }
 
 .card-text {
@@ -231,6 +255,7 @@ td {
 
 th,
 td {
+  color: var(--blk);
   width: 180px;
   border: 1px solid var(--w);
 }
@@ -462,4 +487,72 @@ form textarea {
 /* UTILITY CLASSES */
 .t-upper {
   text-transform: uppercase;
+}
+
+/* MEDIA QUERIES */
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  nav {
+    width: 100%;
+    grid: 1fr/ 1fr 1fr auto 1fr 1fr;
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  button.menu-toggle {
+    display: flex;
+
+    transition: transform 0.3s ease;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--primary);
+    padding: 1rem 0;
+
+    width: 100%;
+    text-align: center;
+  }
+
+  header {
+    text-align: center;
+
+    /* layout */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  div.card-grid {
+    display: grid;
+    grid: 1fr 1fr 1fr 1fr/ 1fr;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .footer-container {
+    grid: 1fr 1fr 1fr/1fr;
+
+    /* sizing */
+    gap: 0.5rem;
+  }
 }
