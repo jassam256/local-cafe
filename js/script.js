@@ -1,39 +1,17 @@
-// MENU NAVIGATION
-const drinksBtn = document.getElementById("drinks-btn");
-const foodBtn = document.getElementById("food-btn");
-const dessertBtn = document.getElementById("dessert-btn");
+// NAV MENU TOGGLE
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementsByClassName("nav-links");
 
-// Initially used a click rather than a mouseover
-drinksBtn.addEventListener("mouseover", () => openForm("drinks-menu"));
-foodBtn.addEventListener("mouseover", () => openForm("food-menu"));
-dessertBtn.addEventListener("mouseover", () => openForm("dessert-menu"));
+toggle.addEventListener("click", () => {
+  // console.log("menu click");
 
-function openForm(target) {
-  let targetForm = document.getElementById(target);
+  // change icon
+  if (toggle.textContent == "✕") {
+    toggle.textContent = "☰";
+  } else toggle.textContent = "✕";
 
-  if (targetForm.classList.contains("hide")) {
-    closeForms();
-
-    targetForm.classList.remove("hide");
-  } else {
-    // targetForm.classList.add("hide");
+  // show links
+  for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].classList.toggle("show");
   }
-}
-
-function closeForms() {
-  const drinks = document.getElementById("drinks-menu");
-  const food = document.getElementById("food-menu");
-  const dessert = document.getElementById("dessert-menu");
-
-  if (!drinks.classList.contains("hide")) {
-    drinks.classList.add("hide");
-  }
-
-  if (!food.classList.contains("hide")) {
-    food.classList.add("hide");
-  }
-
-  if (!dessert.classList.contains("hide")) {
-    dessert.classList.add("hide");
-  }
-}
+});
