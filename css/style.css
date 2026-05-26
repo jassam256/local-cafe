@@ -16,7 +16,9 @@ body {
 :root {
   --primary: #f5f1ea;
   --secondary: #6b705c;
+  --secondary-hover: #848a73;
   --accent: #c97b63;
+  --accent-hover: #c98b78;
   --blk: #000000;
   --w: #ffffff;
 }
@@ -47,20 +49,27 @@ nav {
   /* spacing */
   margin: auto;
 
+  /* sizing */
+  width: 900px;
+
   /* styling */
   text-align: center;
 }
 
 nav a {
-  color: black;
+  color: var(--blk);
   text-decoration: none;
 }
 
 /* footer */
 footer {
+  /* layout */
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  /* styling */
+  background-color: var(--accent);
 }
 
 .footer-container {
@@ -73,10 +82,16 @@ footer {
 
   /* sizing */
   gap: 5rem;
+  width: 80%;
 
   /* spacing */
   margin: auto;
   padding: 2rem;
+}
+
+.footer-copyright {
+  background-color: var(--secondary);
+  padding: 0.5rem;
 }
 
 /* ELEMENT STYLNG */
@@ -85,10 +100,13 @@ button {
   background-color: var(--accent);
   box-shadow: 1px 1px 2px #000000;
 
+  /* border styling */
   border-radius: 5px;
   border: 1px black solid;
   outline: none;
 
+  /* text styling */
+  text-align: center;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 20%;
@@ -96,8 +114,14 @@ button {
   /* spacing */
   padding: 0.8rem 0.5rem;
 
+  /* pseudo classes */
   &:hover {
     cursor: pointer;
+    background-color: var(--accent-hover);
+  }
+
+  &:active {
+    background-color: var(--accent);
   }
 }
 
@@ -177,11 +201,38 @@ div.card-grid {
   padding: 2rem;
 }
 
+.card-text button {
+  margin: 2rem;
+}
+
 .card-img {
   /* sizing */
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+table {
+  margin: 20px;
+  border-collapse: collapse;
+  border: 1px solid var(--w);
+}
+
+th {
+  text-transform: uppercase;
+  color: var(--blk);
+  background-color: var(--secondary-hover);
+}
+
+td {
+  padding: 5px;
+  background-color: var(--secondary-hover);
+}
+
+th,
+td {
+  width: 180px;
+  border: 1px solid var(--w);
 }
 
 /* contact section */
@@ -244,7 +295,7 @@ div.menu-nav a {
   align-items: center;
 
   /* sizing */
-  height: 40vh;
+  height: 50vh;
   width: 100vw;
 }
 
@@ -270,6 +321,8 @@ div.menu-nav a {
   height: 360px;
   object-fit: cover;
   object-position: center;
+
+  border-radius: 10px;
 }
 
 .menu-content {
@@ -347,16 +400,25 @@ div.menu-nav a {
 /* END OF MENU CONTENT */
 
 /* CONTACT PAGE */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .contact-heading {
   text-align: center;
 }
 
 form {
-  margin: auto;
+  margin: 50px auto 50px auto;
   width: 500px;
   height: 300px;
 
   background-color: var(--secondary);
+  border: 1px solid var(--blk);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 
