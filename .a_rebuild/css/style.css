@@ -12,8 +12,8 @@
 
 :root {
   --primary: #e6ddcf;
-  --secondary: #959c80;
-  --secondary-hover: #aeb596;
+  --secondary: #afb699;
+  --secondary-hover: #ccd3b4;
   --accent: #c97b63;
   --accent-hover: #c98b78;
   --blk: #000000;
@@ -43,9 +43,8 @@ h1.logo a {
 
 /* ELEMENT STYLING */
 button {
-  /* layout */
-
   /* styling */
+  font-family: "Source Sans 3", sans-serif;
   background-color: var(--accent);
 
   /* border styling */
@@ -55,6 +54,7 @@ button {
 
   /* text styling */
   text-align: center;
+  font-weight: bold;
   line-height: 1;
   letter-spacing: 0.2rem;
 
@@ -132,7 +132,7 @@ nav {
 
   /* spacing */
   margin: auto;
-  gap: 0.2rem;
+  gap: 5px;
 
   /* styling */
   background: none;
@@ -145,9 +145,26 @@ nav {
 }
 
 .menu-toggle span {
-  width: 1.5rem;
+  width: 30px;
   height: 4px;
   background: var(--blk);
+}
+
+/* --- Animation States --- */
+
+/* Hide the middle line */
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+/* Rotate top line down */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+/* Rotate bottom line up */
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* footer */
@@ -158,7 +175,7 @@ footer {
   text-align: center;
 
   /* styling */
-  background-color: var(--secondary-hover);
+  background-color: var(--primary);
 }
 
 .footer-container {
@@ -186,8 +203,10 @@ footer {
   padding: 0.8rem;
 
   /* styling */
-  background-color: var(--secondary-hover);
+  background-color: var(--secondary);
   color: var(--blk);
+
+  letter-spacing: 0;
 }
 
 .footer-copyright p {
@@ -238,17 +257,10 @@ div.hero-content {
 /* TODO: delete or make visible with shadow */
 div.hero-content h2 {
   /* styling */
+  text-align: center;
+
   font-size: 5rem;
   text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.8);
-
-  border-radius: 10px;
-
-  translate: 0 -185px;
-}
-
-button.cta-btn {
-  font-weight: bold;
-  translate: 0 150px;
 }
 
 /* card section */
@@ -266,6 +278,7 @@ div.card-grid {
   align-items: center;
 
   height: 300px;
+  gap: 8px;
 
   /* styling */
   text-align: center;
@@ -274,26 +287,33 @@ div.card-grid {
   grid-column: span 2;
 }
 
+.card-txt p {
+  padding: 10px;
+  min-width: 320px;
+  max-width: 650px;
+}
+
 .card-img {
   /* sizing */
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
-}
 
-#card-1 a {
-  margin-top: 2rem;
+  grid-column: span 1;
 }
 
 /* table */
+div.table {
+  margin: 20px;
+}
+
 table {
   /* spacing */
-  margin: 20px;
+  margin-top: 8px;
 
   /* styling */
   border-collapse: collapse;
-  border: 1px solid var(--w);
 }
 
 th {
@@ -315,7 +335,7 @@ td {
   width: 12rem;
 
   /* styling */
-  border: 1px solid var(--w);
+  /* border: 1px solid var(--w); */
 }
 
 /* contact section */
@@ -334,6 +354,115 @@ td {
   background-color: var(--primary);
 }
 /* END OF INDEX PAGE */
+
+/* START OF MENU PAGE */
+.main-header {
+  /* styling */
+  text-align: center;
+  background-color: var(--accent);
+
+  /* spacing */
+  padding: 0.5rem;
+}
+
+.menu-nav {
+  /* layout */
+  display: grid;
+  grid: 1fr / 1fr 1fr 1fr;
+  width: 100%;
+
+  /* styling */
+  font-size: 24px;
+  background-color: var(--secondary);
+
+  /* sizing */
+  height: 60px;
+}
+
+.menu-btn {
+  /* button styling */
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+
+  /* styling */
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 8px;
+
+  text-align: center;
+  align-content: center;
+
+  /* pseudo-classes */
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: var(--secondary-hover);
+  }
+}
+
+/* menu section */
+#menu-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* drinks / food / dessert menu */
+#drinks-menu,
+#food-menu,
+#dessert-menu {
+  display: grid;
+  grid: 400px 1fr / 300px;
+  justify-content: center;
+  align-items: start;
+}
+
+#drinks-menu.hide,
+#food-menu.hide,
+#dessert-menu.hide {
+  display: none;
+}
+
+.menu-content {
+}
+
+.menu-img {
+  width: 300px;
+  height: 400px;
+
+  margin: auto;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 10px;
+}
+
+/* drinks menu */
+.drinks-header,
+.drinks-row {
+  display: grid;
+  grid: 1fr / 200px 48px 48px;
+  min-width: 320px;
+
+  text-align: center;
+}
+
+.drinks-header {
+  font-weight: bold;
+}
+
+.drinks-row :first-child {
+  text-align: left;
+}
+
+/* food menu */
+.food-row p {
+  font-size: 12px;
+}
 
 /* UTILITY CLASSES */
 .t-upper {
