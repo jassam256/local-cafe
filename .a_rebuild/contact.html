@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Cafe - Contact</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <script
     async
@@ -22,12 +23,78 @@
       <nav>
         <a href="./index.html" class="nav-links">Home</a>
         <a href="./menu.html" class="nav-links">Menu</a>
-        <h1 class="logo"><a href="./index.html">Local Cafe</a></h1>
+        <a href="./index.html"
+          ><img
+            src="./img/coffee-cup.png"
+            class="logo icon"
+            alt="An icon of a coffee cup"
+          />
+        </a>
         <a href="./about.html" class="nav-links">About</a>
         <a href="./contact.html" class="nav-links">Contact</a>
       </nav>
     </header>
     <!-- END OF HEADER SECTION -->
+
+    <!-- START OF MAIN SECTION -->
+    <main>
+      <div class="main-header">
+        <h2 class="t-upper letter-space">Contact Us</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- START OF CONTACT FORM -->
+        <form class="contact-form" action="#">
+          <label for="name">Name*</label>
+          <input type="text" name="name" id="name" />
+          <label for="name">Phone</label>
+          <input type="text" name="name" id="name" />
+          <label for="name">Email</label>
+          <input type="text" name="name" id="name" />
+          <label for="name">Message*</label>
+          <textarea name="message" id="message"></textarea>
+          <button class="contact-btn" type="submit">Submit</button>
+        </form>
+        <!-- END OF CONTACT FORM -->
+
+        <!-- START OF OPENING HOURS TABLE -->
+        <div class="contact-card">
+          <div class="contact-table">
+            <h4 class="t-upper">Opening Hours</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Monday - Friday</td>
+                  <td>7am - 4pm</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>7am - 3pm</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>8am - 3pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- END OF OPENING HOURS TABLE -->
+
+        <!-- GOOGLE MAPS EMBED -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.336961692406!2d145.04655987785085!3d-37.937047720046145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66d8a7707e59d%3A0x4eaf69b9bc8957d9!2sHolmesglen%20Institute!5e1!3m2!1sen!2sau!4v1780022049006!5m2!1sen!2sau"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </main>
+    <!-- END OF MAIN SECTION -->
 
     <!-- START OF FOOTER SECTION -->
     <footer>
@@ -47,8 +114,13 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <p>© 2025 by Jason Sam</p>
+        <p>© 2026 by Jason Sam</p>
         <p>This website is a fictional cafe created for educational purposes</p>
+        <p>
+          <a href="https://www.flaticon.com/free-icons/cafe" title="cafe icons"
+            >Cafe icons created by Pixel perfect - Flaticon
+          </a>
+        </p>
       </div>
     </footer>
     <!-- END OF FOOTER SECTION -->

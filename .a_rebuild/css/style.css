@@ -22,7 +22,7 @@
 
 body {
   font-family: "Source Sans 3", sans-serif;
-  letter-spacing: 0.25rem;
+  /* letter-spacing: 0.25rem; */
   background-color: var(--primary);
 }
 
@@ -115,6 +115,7 @@ nav {
   &:hover {
     cursor: pointer;
     text-decoration: underline;
+    background: var(--primary);
   }
 }
 
@@ -135,12 +136,12 @@ nav {
   gap: 5px;
 
   /* styling */
-  background: none;
+  background: var(--primary);
   border: none;
 
   &:hover {
     cursor: pointer;
-    background: none;
+    background: var(--primary);
   }
 }
 
@@ -260,14 +261,19 @@ div.hero-content h2 {
   text-align: center;
 
   font-size: 5rem;
-  text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.8);
+  color: var(--w);
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 
 /* card section */
 div.card-grid {
   /* layout */
   display: grid;
-  grid: auto auto auto auto/ 1fr 1fr;
+  grid: auto auto auto auto / 1fr 1fr;
 }
 
 .card-txt {
@@ -277,8 +283,12 @@ div.card-grid {
   justify-content: center;
   align-items: center;
 
-  height: 300px;
+  /* sizing */
+  height: 350px;
+
+  /* spacing */
   gap: 8px;
+  padding: 0 1rem 0 1rem;
 
   /* styling */
   text-align: center;
@@ -304,11 +314,8 @@ div.card-grid {
 }
 
 /* table */
-div.table {
-  margin: 20px;
-}
 
-table {
+.contact-table {
   /* spacing */
   margin-top: 8px;
 
@@ -316,25 +323,16 @@ table {
   border-collapse: collapse;
 }
 
-th {
-  /* styling */
-  text-transform: uppercase;
-
-  /* spacing */
-  padding: 0.25rem;
+.contact-table h4 {
+  text-align: center;
 }
 
-td {
-  /* spacing */
-  padding: 0.25rem;
-}
-
-th,
 td {
   /* sizing */
   width: 12rem;
 
   /* styling */
+  text-align: center;
   /* border: 1px solid var(--w); */
 }
 
@@ -351,8 +349,8 @@ td {
   gap: 1rem;
 
   /* styling */
-  background-color: var(--primary);
 }
+
 /* END OF INDEX PAGE */
 
 /* START OF MENU PAGE */
@@ -389,7 +387,7 @@ td {
   /* styling */
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 8px;
+  letter-spacing: 0.2rem;
 
   text-align: center;
   align-content: center;
@@ -402,6 +400,11 @@ td {
   }
 }
 
+.selected {
+  text-decoration: underline;
+  background-color: var(--secondary-hover);
+}
+
 /* menu section */
 #menu-section {
   display: flex;
@@ -410,12 +413,16 @@ td {
   align-items: center;
 }
 
+.menu-content {
+  padding-top: 20px;
+}
+
 /* drinks / food / dessert menu */
 #drinks-menu,
 #food-menu,
 #dessert-menu {
   display: grid;
-  grid: 400px 1fr / 300px;
+  grid: 340px 1fr / 300px;
   justify-content: center;
   align-items: start;
 }
@@ -426,12 +433,9 @@ td {
   display: none;
 }
 
-.menu-content {
-}
-
 .menu-img {
   width: 300px;
-  height: 400px;
+  height: 300px;
 
   margin: auto;
 
@@ -459,12 +463,143 @@ td {
   text-align: left;
 }
 
-/* food menu */
+/* food menu, dessert menu */
+.food-header,
+.dessert-row {
+  display: grid;
+  grid: 1fr / 200px 1fr;
+}
+
 .food-row p {
   font-size: 12px;
+}
+
+/* ABOUT PAGE */
+
+.about-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  background-color: var(--secondary);
+  text-align: left;
+  padding: 1rem;
+  gap: 12px;
+}
+
+.img-container {
+  /* layout */
+  display: flex;
+  flex-direction: column;
+
+  /* spacing */
+  margin: auto;
+}
+
+.about-img {
+  /* sizing */
+  height: 100%;
+  width: 100%;
+  max-width: 320px;
+
+  object-fit: cover;
+  object-position: center;
+
+  /* spacing */
+  margin: 0.5rem;
+
+  /* styling */
+  border-radius: 10px;
+}
+
+/* CONTACT PAGE */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  /* layout */
+  display: grid;
+  grid: auto auto auto auto auto/ 1fr 1fr;
+
+  /* sizing */
+  width: 320px;
+
+  /* spacing */
+  margin: 1rem auto 1rem auto;
+  padding: 20px;
+  gap: 1rem;
+
+  /* styling */
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+
+.contact-form input {
+  height: 1.5rem;
+  align-self: center;
+  padding: 0.25rem;
+
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.contact-form textarea {
+  height: 150px;
+  padding: 0.25rem;
+  font-family: "Source Sans 3", Arial, sans-serif;
+}
+
+.contact-card {
+  width: 320px;
+  margin: auto;
+}
+
+.contact-btn {
+  grid-column: span 2;
+  margin: auto;
+}
+
+/* Google Maps Embed */
+.map-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  margin: 1rem auto 1rem auto;
+
+  min-width: 320px;
+}
+.map-container iframe {
+  margin: auto;
+
+  height: 240px;
+  width: 300px;
+
+  padding: 0 20px 0 20px;
 }
 
 /* UTILITY CLASSES */
 .t-upper {
   text-transform: uppercase;
+}
+
+.letter-space {
+  letter-spacing: 0.25rem;
+}
+
+/* logo and icon */
+img.logo {
+  display: none;
+}
+
+.icon {
+  display: block;
+  height: 48px;
+  width: 48px;
+
+  margin: auto;
 }

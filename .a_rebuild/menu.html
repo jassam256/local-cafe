@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Cafe - Menu</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <script
     async
@@ -22,7 +23,13 @@
       <nav>
         <a href="./index.html" class="nav-links">Home</a>
         <a href="./menu.html" class="nav-links">Menu</a>
-        <h1 class="logo"><a href="./index.html">Local Cafe</a></h1>
+        <a href="./index.html"
+          ><img
+            src="./img/coffee-cup.png"
+            class="logo icon"
+            alt="An icon of a coffee cup"
+          />
+        </a>
         <a href="./about.html" class="nav-links">About</a>
         <a href="./contact.html" class="nav-links">Contact</a>
       </nav>
@@ -32,18 +39,19 @@
     <!-- START OF MAIN SECTION -->
     <main>
       <div class="main-header">
-        <h1 class="t-upper">Menu</h1>
+        <h2 class="t-upper letter-space">Menu</h2>
       </div>
       <div class="menu-nav">
-        <button type="button" class="menu-btn" id="drinks-btn">Drinks</button>
+        <button type="button" class="menu-btn selected" id="drinks-btn">
+          Drinks
+        </button>
         <button type="button" class="menu-btn" id="food-btn">Food</button>
         <button type="button" class="menu-btn" id="dessert-btn">Dessert</button>
       </div>
 
       <div id="menu-section">
-        <div id="drinks-menu" class="">
+        <div id="drinks-menu">
           <div class="menu-content">
-            <h2>Drinks</h2>
             <div class="drinks-header">
               <span></span>
               <span>S</span>
@@ -66,12 +74,12 @@
               <span></span>
             </div>
             <div class="drinks-row">
-              <span>Espresso (Short Black)</span>
+              <span>Espresso</span>
               <span>5</span>
               <span>-</span>
             </div>
             <div class="drinks-row">
-              <span>Piccolo (Short Macchiato)</span>
+              <span>Piccolo</span>
               <span></span>
               <span></span>
             </div>
@@ -108,8 +116,6 @@
 
         <div id="food-menu" class="hide">
           <div class="menu-content">
-            <h2>Food</h2>
-            <br />
             <div class="food-row">
               <div class="food-header">
                 <span>Smashed Avo</span>
@@ -141,8 +147,6 @@
 
         <div id="dessert-menu" class="hide">
           <div class="menu-content">
-            <h2>Dessert</h2>
-            <br />
             <div class="dessert-content">
               <div class="dessert-row">
                 <span>Cheese Cake</span>
@@ -202,8 +206,13 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <p>© 2025 by Jason Sam</p>
+        <p>© 2026 by Jason Sam</p>
         <p>This website is a fictional cafe created for educational purposes</p>
+        <p>
+          <a href="https://www.flaticon.com/free-icons/cafe" title="cafe icons"
+            >Cafe icons created by Pixel perfect - Flaticon
+          </a>
+        </p>
       </div>
     </footer>
     <!-- END OF FOOTER SECTION -->
