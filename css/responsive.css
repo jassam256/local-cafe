@@ -93,17 +93,34 @@
   }
 
   .menu-img {
+    /* sizing */
     width: 400px;
     height: 300px;
   }
 
   .drinks-header,
   .drinks-row {
+    /* sizing */
     min-width: 0;
   }
 
   /* ABOUT CONTENT */
+  .about-txt {
+    /* spacing */
+    padding: 1rem 10rem;
+  }
+
   .img-container {
+    /* layout */
     flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    /* sizing */
+    width: 100%;
+  }
+
+  .about-img {
+    max-width: 420px;
   }
 }

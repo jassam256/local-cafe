@@ -517,27 +517,30 @@ td {
 
   background-color: var(--secondary);
   text-align: left;
-  padding: 1rem;
+  padding: 1rem 2rem;
   gap: 12px;
 }
 
 .img-container {
   /* layout */
   display: flex;
+  justify-content: center;
+  align-items: center;
+
   flex-direction: column;
+  overflow-x: auto;
 
   /* spacing */
-  margin: auto;
 }
 
 .about-img {
   /* sizing */
   height: 100%;
   width: 100%;
-  max-width: 320px;
+  max-width: 720px;
 
   object-fit: cover;
-  object-position: center;
+  object-position:;
 
   /* spacing */
   margin: 0.5rem;
