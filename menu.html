@@ -5,54 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Cafe - Menu</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
-  <!-- Google tag (gtag.js) -->
   <script
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-CJ4JYC6DSH"
   ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-CJ4JYC6DSH");
-  </script>
   <body>
     <!-- START OF HEADER SECTION -->
     <header>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <button type="button" class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <nav>
-        <a class="nav-links" href="./index.html">Home</a>
-        <a class="nav-links" href="./menu.html">Menu</a>
-        <a class="logo" href="./index.html"><h1>Local Cafe</h1></a>
-        <a class="nav-links" href="./about.html">About</a>
-        <a class="nav-links" href="./contact.html">Contact</a>
+        <a href="./index.html" class="nav-links">Home</a>
+        <a href="./menu.html" class="nav-links">Menu</a>
+        <a href="./index.html"
+          ><img
+            src="./img/coffee-cup.png"
+            class="logo icon"
+            alt="An icon of a coffee cup"
+          />
+        </a>
+        <a href="./about.html" class="nav-links">About</a>
+        <a href="./contact.html" class="nav-links">Contact</a>
       </nav>
     </header>
     <!-- END OF HEADER SECTION -->
 
+    <!-- START OF MAIN SECTION -->
     <main>
-      <h2 class="menu-heading t-upper">Menu</h2>
+      <div class="main-header">
+        <h2 class="t-upper letter-space">Menu</h2>
+      </div>
       <div class="menu-nav">
-        <a href="#" id="drinks-btn">Drinks</a>
-        <a href="#" id="food-btn">Food</a>
-        <a href="#" id="dessert-btn">Dessert</a>
+        <button type="button" class="menu-btn selected" id="drinks-btn">
+          Drinks
+        </button>
+        <button type="button" class="menu-btn" id="food-btn">Food</button>
+        <button type="button" class="menu-btn" id="dessert-btn">Dessert</button>
       </div>
 
       <div id="menu-section">
         <div id="drinks-menu">
-          <img
-            class="menu-img"
-            src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1637&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          />
-
           <div class="menu-content">
-            <h2>Drinks</h2>
             <div class="drinks-header">
               <span></span>
               <span>S</span>
@@ -75,12 +74,12 @@
               <span></span>
             </div>
             <div class="drinks-row">
-              <span>Espresso (Short Black)</span>
+              <span>Espresso</span>
               <span>5</span>
               <span>-</span>
             </div>
             <div class="drinks-row">
-              <span>Piccolo (Short Macchiato)</span>
+              <span>Piccolo</span>
               <span></span>
               <span></span>
             </div>
@@ -107,11 +106,16 @@
               <span>5.5</span>
             </div>
           </div>
+
+          <img
+            class="menu-img"
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
         </div>
 
         <div id="food-menu" class="hide">
           <div class="menu-content">
-            <h2>Food</h2>
             <div class="food-row">
               <div class="food-header">
                 <span>Smashed Avo</span>
@@ -136,20 +140,13 @@
           </div>
           <img
             class="menu-img"
-            src="https://images.unsplash.com/photo-1621241442203-6d06663d2956?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1621241442203-6d06663d2956?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
         </div>
 
         <div id="dessert-menu" class="hide">
-          <img
-            class="menu-img"
-            src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1078&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          />
-
           <div class="menu-content">
-            <h2>Dessert</h2>
             <div class="dessert-content">
               <div class="dessert-row">
                 <span>Cheese Cake</span>
@@ -170,34 +167,56 @@
               </div>
             </div>
           </div>
+
+          <img
+            class="menu-img"
+            src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1378&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
         </div>
       </div>
     </main>
+    <!-- END OF MAIN SECTION -->
 
     <!-- START OF FOOTER SECTION -->
     <footer>
+      <!-- START OF CONTACT SECTION -->
+      <section class="card-contact">
+        <h3 class="t-upper">Any Questions?</h3>
+        <p>Come say hi</p>
+        <a href="./contact.html">
+          <button type="button" class="t-upper">Contact Us</button>
+        </a>
+      </section>
+      <!-- END OF CONTACT SECTION -->
+
       <div class="footer-container">
-        <div>
+        <div class="contact-info">
           <h4>Address</h4>
-          <p>123 Paper St, <br />Moorabbin VIC</p>
+          <p>123 Paper St</p>
+          <p>Moorabbin VIC</p>
         </div>
-        <div>
+        <div class="contact-info">
           <h4>Phone</h4>
           <p>(03) 9512 3456</p>
         </div>
-        <div>
+        <div class="contact-info">
           <h4>Email</h4>
           <p>local@cafe.com</p>
         </div>
       </div>
       <div class="footer-copyright">
-        <h5>© 2026 by Jason Sam</h5>
-        <h6>
-          This website is a fictional cafe created for educational purposes
-        </h6>
+        <p>© 2026 by Jason Sam</p>
+        <p>This website is a fictional cafe created for educational purposes</p>
+        <p>
+          <a href="https://www.flaticon.com/free-icons/cafe" title="cafe icons"
+            >Cafe icons created by Pixel perfect - Flaticon
+          </a>
+        </p>
       </div>
     </footer>
     <!-- END OF FOOTER SECTION -->
+
     <script src="./js/script.js"></script>
     <script src="./js/menu.js"></script>
   </body>
