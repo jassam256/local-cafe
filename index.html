@@ -5,59 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Cafe</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
-  <!-- Google tag (gtag.js) -->
   <script
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-CJ4JYC6DSH"
   ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-CJ4JYC6DSH");
-  </script>
   <body>
     <!-- START OF HEADER SECTION -->
     <header>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <button type="button" class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <nav>
-        <a class="nav-links" href="./index.html">Home</a>
-        <a class="nav-links" href="./menu.html">Menu</a>
-        <a class="logo" href="./index.html"><h1>Local Cafe</h1></a>
-        <a class="nav-links" href="./about.html">About</a>
-        <a class="nav-links" href="./contact.html">Contact</a>
+        <a href="./index.html" class="nav-links">Home</a>
+        <a href="./menu.html" class="nav-links">Menu</a>
+        <a href="./index.html">
+            <img
+              src="./img/coffee-cup.png"
+              class="logo icon"
+              alt="An icon of a coffee cup"
+            />
+          </div>
+        </a>
+        <a href="./about.html" class="nav-links">About</a>
+        <a href="./contact.html" class="nav-links">Contact</a>
       </nav>
     </header>
     <!-- END OF HEADER SECTION -->
 
+    <!-- START OF MAIN SECTION -->
     <main>
-      <section class="hero">
+      <!-- START OF HERO SECTION -->
+      <section class="hero-section">
         <div class="hero-content">
-          <h2 class="t-upper">Local Cafe</h2>
-          <a href="./menu.html"><button type="button">View Menu</button></a>
+          <h2 class="t-upper letter-space">Local Cafe</h2>
+          <a href="./menu.html">
+            <button type="button" class="cta-btn t-upper">View Menu</button>
+          </a>
         </div>
       </section>
+      <!-- END OF HERO SECTION -->
+
+      <!-- START OF CARD SECTION -->
       <div class="card-grid">
-        <img class="card-img" src="https://placehold.co/600x400" alt="" />
-        <div class="card-text">
-          <h3 class="t-upper">Visit Us</h3>
-          <p>123 Paper St,<br />Moorabbin VIC</p>
+        <div class="card-txt" id="card-1">
+          <h3 class="t-upper">Welcome to Local Cafe</h3>
+          <p>
+            Our cosy little cafe serves as the perfect backdrop to grab a quick
+            bite, enjoy a delicious cofee and meet up with friends, family and
+            loved ones.
+          </p>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="An mixture of breakfast foods laid out on a table, including berry salads and waffles."
+          class="card-img"
+          id="card-2"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1637&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Steamed milk being poured into a cup of coffee, making latte art hearts."
+          class="card-img"
+          id="card-3"
+        />
+      </div>
+      <div class="card-txt" id="card-4">
+        <a href="./contact.html">
+          <button type="button" class="cta-btn t-upper">Visit Us</button>
+        </a>
+        <p>
+          123 Paper St <br />
+          Moorabbin VIC
+        </p>
+        <!-- START OF OPENING HOURS TABLE -->
+        <div class="table">
+          <h4 class="t-upper">Opening Hours</h4>
           <table>
             <tbody>
-              <thead>
-                <th>Day</th>
-                <th>Opening Hours</th>
-              </thead>
               <tr>
                 <td>Monday - Friday</td>
                 <td>7am - 4pm</td>
               </tr>
-              <tr></tr>
               <tr>
                 <td>Saturday</td>
                 <td>7am - 3pm</td>
@@ -69,48 +101,51 @@
             </tbody>
           </table>
         </div>
-        <div class="card-text">
-          <h3 class="t-upper">Welcome to Local Cafe</h3>
-          <p>
-            Our cosy little cafe serves as the perfect backdrop to grab a quick
-            bite, do some studying or meeting up with friends and loved ones.
-          </p>
-          <a href="./menu.html"><button type="button">VIEW MENU</button></a>
-        </div>
-        <img class="card-img" src="https://placehold.co/600x400" alt="" />
+        <!-- END OF OPENING HOURS TABLE -->
       </div>
-
-      <section class="card-contact">
-        <h3 class="t-upper">Any Questions?</h3>
-        <p>Come say hi</p>
-        <a href="./contact.html"><button type="button">Contact Us</button></a>
-      </section>
+      <!-- END OF CARD SECTION -->
     </main>
+    <!-- END OF MAIN SECTION -->
 
     <!-- START OF FOOTER SECTION -->
     <footer>
+      <!-- START OF CONTACT SECTION -->
+      <section class="card-contact">
+        <h3 class="t-upper">Any Questions?</h3>
+        <p>Come say hi</p>
+        <a href="./contact.html">
+          <button type="button" class="t-upper">Contact Us</button>
+        </a>
+      </section>
+      <!-- END OF CONTACT SECTION -->
+
       <div class="footer-container">
-        <div>
+        <div class="contact-info">
           <h4>Address</h4>
-          <p>123 Paper St, <br />Moorabbin VIC</p>
+          <p>123 Paper St</p>
+          <p>Moorabbin VIC</p>
         </div>
-        <div>
+        <div class="contact-info">
           <h4>Phone</h4>
           <p>(03) 9512 3456</p>
         </div>
-        <div>
+        <div class="contact-info">
           <h4>Email</h4>
           <p>local@cafe.com</p>
         </div>
       </div>
       <div class="footer-copyright">
-        <h5>© 2026 by Jason Sam</h5>
-        <h6>
-          This website is a fictional cafe created for educational purposes
-        </h6>
+        <p>© 2026 by Jason Sam</p>
+        <p>This website is a fictional cafe created for educational purposes</p>
+        <p>
+          <a href="https://www.flaticon.com/free-icons/cafe" title="cafe icons"
+            >Cafe icons created by Pixel perfect - Flaticon
+          </a>
+        </p>
       </div>
     </footer>
     <!-- END OF FOOTER SECTION -->
+
     <script src="./js/script.js"></script>
   </body>
 </html>
