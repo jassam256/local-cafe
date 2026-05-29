@@ -91,9 +91,11 @@ header {
 /* navigation */
 nav {
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 1200;
   width: 100%;
+  overflow-y: auto;
+  max-height: 80vh;
 
   /* styling */
   background: var(--primary);
