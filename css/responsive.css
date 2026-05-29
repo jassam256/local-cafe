@@ -36,6 +36,11 @@
     /* spacing */
     padding: 12px 24px;
   }
+
+  .img-container {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* Desktop / Large Screens */
@@ -106,21 +111,31 @@
 
   /* ABOUT CONTENT */
   .about-txt {
+    /* styling */
+    background-color: var(--secondary);
+    border-radius: 10px;
+    text-align: left;
+
+    /* sizing */
+    max-width: 900px;
+
     /* spacing */
-    padding: 1rem 10rem;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
   }
 
   .img-container {
     /* layout */
+    display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
 
-    /* sizing */
-    width: 100%;
+    margin: auto;
   }
 
   .about-img {
-    max-width: 420px;
+    max-width: 900px;
   }
 }

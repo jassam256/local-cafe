@@ -509,6 +509,11 @@ td {
 
 /* ABOUT PAGE */
 
+.about-container {
+  width: 100%;
+  background-color: var(--primary);
+}
+
 .about-txt {
   display: flex;
   flex-direction: column;
@@ -518,32 +523,32 @@ td {
   background-color: var(--secondary);
   text-align: left;
   padding: 1rem 2rem;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .img-container {
   /* layout */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  flex-direction: column;
-  overflow-x: auto;
-
   /* spacing */
+  gap: 1rem;
 }
 
 .about-img {
   /* sizing */
   height: 100%;
   width: 100%;
+  min-width: 300px;
   max-width: 720px;
 
   object-fit: cover;
   object-position:;
 
   /* spacing */
-  margin: 0.5rem;
+  margin: auto;
 
   /* styling */
   border-radius: 10px;
