@@ -23,28 +23,6 @@
 
 /* Landscape Tablets / Medium Screens */
 @media (min-width: 768px) {
-  /* CONTACT CONTENT */
-  .contact-grid {
-    display: grid;
-    grid: auto auto / 450px 350px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* BUTTON SIZING */
-  button {
-    /* spacing */
-    padding: 12px 24px;
-  }
-
-  .img-container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-/* Desktop / Large Screens */
-@media (min-width: 1025px) {
   /* HEADER, NAVIGATION */
   .menu-toggle {
     display: none;
@@ -88,6 +66,28 @@
     height: 48px;
   }
 
+  /* CONTACT CONTENT */
+  .contact-grid {
+    display: grid;
+    grid: auto auto / 480px 280px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* BUTTON SIZING */
+  button {
+    /* spacing */
+    padding: 12px 24px;
+  }
+
+  .img-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Desktop / Large Screens */
+@media (min-width: 1025px) {
   /* MENU CONTENT */
   #drinks-menu,
   #food-menu,
@@ -137,5 +137,20 @@
 
   .about-img {
     max-width: 900px;
+  }
+
+  /* CONTACT PAGE */
+
+  /* CONTACT CONTENT */
+  .contact-grid {
+    display: grid;
+    grid: auto auto / 480px 480px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map-container iframe {
+    height: 360px;
+    width: 480px;
   }
 }

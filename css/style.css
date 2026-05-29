@@ -566,7 +566,7 @@ td {
   grid: auto auto auto auto auto/ 1fr 1fr;
 
   /* sizing */
-  width: 320px;
+  width: 300px;
 
   /* spacing */
   margin: 1rem auto 1rem auto;
@@ -582,6 +582,7 @@ td {
   height: 1.5rem;
   align-self: center;
   padding: 0.25rem;
+  min-width: 190px;
 
   font-family: "Source Sans 3", sans-serif;
 }
@@ -641,7 +642,7 @@ td {
   margin: auto;
 
   height: 240px;
-  width: 300px;
+  width: 320px;
 
   padding: 0 20px 0 20px;
 }
