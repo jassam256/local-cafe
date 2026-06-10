@@ -46,13 +46,19 @@
         <!-- START OF CONTACT FORM -->
         <form class="contact-form" action="#">
           <label for="name">Name*</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" required maxlength="100" />
           <label for="name">Phone</label>
           <input type="text" name="name" id="name" />
           <label for="name">Email</label>
           <input type="text" name="name" id="name" />
           <label for="name">Message*</label>
-          <textarea name="message" id="message"></textarea>
+          <textarea
+            name="message"
+            id="message"
+            required
+            minlength="12"
+            maxlength="100"
+          ></textarea>
           <button class="contact-btn t-upper" type="submit">Submit</button>
         </form>
         <!-- END OF CONTACT FORM -->
