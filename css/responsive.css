@@ -38,32 +38,30 @@
   a.nav-links {
     display: block;
 
-    padding: 12px;
+    font-size: 16px;
+    padding: 6px;
   }
 
   /* LOGO */
   a.logo,
   img.logo {
     display: block;
+
+    object-fit: contain;
+    object-position: center;
   }
 
   a.logo {
-    padding: 12px;
+    padding: 8px;
 
     &:hover {
       background-color: var(--primary-hover);
       cursor: pointer;
     }
   }
-
-  .icon {
-    height: 48px;
-    width: 48px;
-  }
-
   img.logo {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
   }
 
   /* CONTACT CONTENT */

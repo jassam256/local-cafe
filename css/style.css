@@ -145,7 +145,7 @@ nav {
 
 a.nav-links {
   font-size: 32px;
-  padding: 24px 24px 24px 24px;
+  padding: 24px;
   width: 100%;
   text-align: center;
 }
@@ -545,7 +545,7 @@ td {
   max-width: 720px;
 
   object-fit: cover;
-  object-position:;
+  object-position: center;
 
   /* spacing */
   margin: auto;
